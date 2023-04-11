@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Best Friend's Reels</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="icon.png">
+</head>
+<body style="overflow:auto">
+
+<div class="login invisible" id="login_id">
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" name="message" id="exampleInputPassword1">
+  </div>
+  <button type="submit" class="btn btn-primary" onclick="login()">Submit</button>
+</form>
+</div>
+<script type="text/javascript" src="script.js"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:red;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="reel.html">Reels <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="images.html">Images <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="about.html">Feedback<span class="sr-only">(current)</span></a>
+      </li>
+
+    </ul>
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right text-light" viewBox="0 0 16 16" onclick="logout()">
+  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+</svg>
+  </div>
+</nav>
+
+<div class="card">
+  <div class="card-header">
+    Best Quotes
+  </div>
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p id="quote_head" class="english">“Each day I love you more, today more than yesterday and less than tomorrow.”</p>
+      <footer>
+      <p class="blockquote-footer english" id="author">Rosemonde Gérard<p>
+      <button class="btn btn-primary" id="quotes_counter" style="right:5px; position:absolute; top:5px">4 / 5</button>
+      </footer>
+    </blockquote>
+  </div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">The Symbol Of Trust</h5>
+        <img src="my_trust_my_img.jpg" class="card-img-top" alt="...">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">The Symbol Of Trust</h5>
+        <img src="her_trust_img.png" class="card-img-top">
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<button class="btn btn-primary" style="margin-top:10px; width:100%;" onclick="view_reel()" id="view_btn">View Reels</button>
+<div class="videos_container invisible" id="videos_holder"></div>
+<style>
+	.videos_container{
+		margin-top: 15px;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.my_videos{
+		flex-grow: 1;
+		height: 450px;
+		max-width: 250px;
+		margin: auto;
+	}
+	body{
+		margin: 0px;
+		padding: 0px;
+	}
+	.card{
+		box-shadow: 2px 2px 10px;
+		margin-top: 10px;
+	}
+	.col{
+		height: 100px;
+		width: 100px;
+		border: 1px solid black;
+	}
+</style>
+
+
+
+<script>
+	
+	    var videos_holder = document.getElementById("videos_holder");
+    var view_reel_button = document.getElementById("view_btn");
+    var videos = ['12tv.mp4','13tv.mp4','15tv.mp4','14tv.mp4','7tv.mp4','16tv.mp4','10tv.mp4','11tv.mp4','5tv.mp4','6tv.mp4','8tv.mp4','9tv.mp4'];
+    var i;
+
+    // This function helps to view reels which is hidden //
+    function view_reel(){
+        if(videos_holder.classList.contains("invisible")){
+            videos_holder.classList.remove("invisible");
+            videos_holder.classList.add("visible");
+            view_reel_button.innerHTML = "Hide Reels";
+        }else if(videos_holder.classList.contains('visible')){
+            videos_holder.classList.remove("visible");
+            videos_holder.classList.add("invisible");
+            view_reel_button.innerHTML = "View Reels"; 
+        }
+    }
+    // This function allows us to view only one video
+    function play_only(video_id){
+        // Pausing all the videos except the videos that user wants to play//
+        for(i=0; i<videos.length; i++){
+            if(video_id != videos[i]){
+                document.getElementById(videos[i]).pause();
+            }
+        }
+    }
+
+    // Displaying videos inside videos_holder //
+    for(i=0; i<videos.length; i++){
+        videos_holder.innerHTML += "<video src=\""+videos[i]+"\" class=\"my_videos\" onplay=\"play_only('"+videos[i]+"')\" id=\""+videos[i]+"\" controls></videos>";
+    }
+
+    var quote_div = document.getElementById("quote_head");
+    var quote_author = document.getElementById("author");
+    var quotes_counter = document.getElementById("quotes_counter");
+    var quotes_index = 0;
+    var quotes;
+    var quotes_en = [
+            {
+            		quote:"Storm clouds may gather and stars may collide, but i love you until the end of time.",
+            		author:"Moulin Rouge"
+            },
+            { 
+                quote:"Each day I love you more, today more than yesterday and less than tomorrow.",
+                author:"Rosemonde Gérard"
+            },
+            {
+                quote:"Every time i look at keyboard, I see that U and I are always together",
+                author:"Robert Frost"
+            },
+            {
+                quote:"It always seems impossible until it’s done",
+                author:"Nelson Mandela"
+            },
+            {
+                quote:"The only way to do great work is to love what you do.",
+                author:"Steve Jobs"
+            },
+            {
+                quote:"Love is like the wind, you can't see it but you can feel it.",
+                author:"Nicholas Sparks"
+            },
+            {
+                quote:"I saw that you were perfect, and so i loved you. Then i saw that you were not perfect and i loved you even more.",
+                author:"Angelita Lim"
+            },
+            {
+                quote:"I would love to be the person that could make you laugh and smile every day.",
+                author:"Anonymous"
+            },
+            {
+                quote:"Every moment I spend with you is my favourite. Being in love with you is the best feeling.",
+                author:"Good Housekeeping"
+            },
+            {
+                quote:"",
+                author:""
+            }];
+        quotes = quotes_en;
+        quotes_counter.innerHTML = "0 / " + quotes.length;
+    // Changing quotes every 5 seconds //
+    setInterval(()=>{
+        if(quotes_index==(quotes.length-1)){
+            quotes_index = 0;
+        }else{
+        	quotes_counter.innerHTML = quotes_index + " / " + quotes.length;
+            quote_author.innerHTML = quotes[quotes_index].author;
+            quote_div.innerHTML = "\"" + quotes[quotes_index].quote + "\"";
+            quotes_index++;
+        }
+    },5000);
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

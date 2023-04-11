@@ -1,0 +1,38 @@
+        .visible{
+            display: visible;
+        }
+        .invisible{
+            display: none;
+        }
+        .login{
+            z-index: 1;
+            background-color: white;
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0px;
+            padding: 10px;
+        }
+        .login form{
+            border: 1px solid black;
+            box-shadow: 2px 2px 5px;
+            padding: 10px;
+            max-width: 330px;
+            margin: auto;
+
+        }
+        .login input{
+            max-width: 330px;
+        }
+
+    .bi-box-arrow-right {
+        height: 30px;
+        width: 30px;
+        position: absolute;
+        right: 10px;
+        top: 4px;
+    }
+    body{
+        margin: 0px;
+        padding: 0px;
+    }

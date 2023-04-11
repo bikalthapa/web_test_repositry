@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Best Friend's Best Image Collection</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="icon" href="icon.png">
+</head>
+<body>
+
+<div class="login invisible" id="login_id">
+<form>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <button type="button" class="btn btn-primary" onclick="login()">Submit</button>
+</form>
+</div>
+<script type="text/javascript" src="script.js"></script>
+
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:red;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="reel.html">Reels <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="images.html">Images <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="about.html">Feedback<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right text-light" viewBox="0 0 16 16" onclick="logout()">
+  <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+  <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+</svg>
+  </div>
+</nav>
+
+
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" style="background-color: lightpink;width:100%; height:400px; overflow:hidden " data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block" style="height:400px; width:auto; margin:auto;" src="1t.jpg" alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block"  style="height:400px; width:auto; margin:auto;" src="2t.jpg" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block"  style="height:400px; width:auto; margin:auto;" src="4t.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block"  style="height:400px; width:auto; margin:auto;" src="4T_001.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block"  style="height:400px; width:auto; margin:auto;" src="t_w_m.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block"  style="height:400px; width:auto; margin:auto;" src="6t.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block"  style="height:400px; width:auto; margin:auto;" src="7t.jpg" alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block"  style="height:400px; width:auto; margin:auto;" src="3t.jpg" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+<div class="card mb-3" style="max-width: 100%; margin-top:10px; box-shadow:2px 2px 5px;">
+  <div class="row g-0">
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">मलाई तिमि यति धेराई खास लग्नुको करण ।</h5>
+        <p class="card-text">मलाई तिमी एती धेरै खास लग्नु को कारण तिमी नै हौ । मेरो ओथ को मुस्कान को कारण पनि तिमी नै हौ । तिमीलाई एती धेरै खास  त तिम्रै बनिले नै बनौऊछ, प्रबेश परिक्ष्या को दिन तिमी कोइ सँग न बोली बस्दा तिमी पनि म जस्तै बोल्न न रुचौने मान्छे रैछौ भन्ने था भयो । साएद यो नै तिमी प्रतिको पहीलो आकर्शन को सन्केत थीयो । तिमी र म बिस्तारि बिस्तारि नजिक हुँदै गैम । मलाई पनि तिम्रो बारेमा था हुँदै गयो । खाज खाने बेलामा खाजा घर मा, तिमीले खाजा बेच्न्ने काकी सँग गरेको बेबहर देखेर म साह्रै खुशी भए । </p>
+        <p class="card-text">
+          तिम्रो बानी जस्तै रिसऊने भए पनि तिम्रो राम्रो बनी नै धेरै रैछ ।
+नकरात्म्क नसोच्ने, बा आमा लाई इज्यत गर्ने, सबै लाई माया गर्ने बानीले मलाई साह्रै नै प्रभाबित परेको थेयो ।  आफ्नो साथी को सधै ख्याल वास्ता गर्ने ।  म परिक्ष्यामा दोश्रो भएको दिन तिमीले "आर्को पली राम्रो गर्नु नि, आझै केही बिग्रेको छैन, एती छितै हार न खाउ न ।" भनेर हौसला दिदा तिम्रो बनी साह्रै नै राम्रो लाग्यो ।  
+        </p>
+
+        <p class="card-text">
+          मैले तिमीलाई भन्ने गर्थिए माया गर्नु हुँदैन, भविस्य बिगृन्छ तर मलाई नै था छैन कि मेरो माया गर्ने मन मा तिमी कसरी था नै नपाई आएर बसेएउ भनेर । अहेले त मेरो मन म बसेर तला पनि लगाएछौ त्यै भएर होला तिमीलाई जस्तै अवस्थाम पनि आफ्नो मन बाट निकाल्नै सक्दिन । मलाई तिमी माथि पुरा बिस्वास छ कि तिमी मेरो मन्को महल मा बसेर मेरो मन लाई कहीले पनि भात्काउने छैनउ । म पनि तिम्रो मन कहीले पनि भात्काउने छुइन । 
+        </p>
+
+        <p class="card-text"><small class="card-title">" म तिमीलाई हिजोको भन्दा आझ धेरै तर भोलिको भन्दा आझ थोरै माया र ख्याल वस्त गर्ने छु ।"</small></p>
+      </div>
+    </div>
+        <div class="col-md-4">
+      <img src="4T_001.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
