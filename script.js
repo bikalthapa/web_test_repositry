@@ -1,6 +1,6 @@
 // Declaring variables //
-    var username = "bikalt40@gmail.com";
-    var password = "Bikal123";
+    var username = "pyariKanxu@gmail.com";
+    var password = "I love you kanxu";
     var in_user_name = document.getElementById("exampleInputEmail1");
     var in_password = document.getElementById("exampleInputPassword1");
     var stored_item = localStorage.getItem("login");
